@@ -7,7 +7,6 @@ export function TimelineDemo() {
 
   const basePath = process.env.NODE_ENV === 'production' ? '/folio' : '';
 
-
   const data = [
     {
       title: "2021-Present",
@@ -49,7 +48,7 @@ export function TimelineDemo() {
 
           <div className="grid grid-cols-2 gap-4">
             <Image
-              src="/GoContact.png"
+              src={`${basePath}/GoContact.png`}
               onClick={() => window.open("https://www.gocontact.com/", "_blank")}
               alt="hero template"
               width={500}
@@ -75,7 +74,7 @@ export function TimelineDemo() {
           <div className="grid grid-cols-2 gap-4">
             <Image
               onClick={() => window.open("https://geometrix.cidma.ua.pt/", "_blank")}
-              src="/geometrix.png"
+              src={`${basePath}/geometrix.png`}
               alt="hero template"
               width={500}
               height={500}

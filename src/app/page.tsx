@@ -2,7 +2,7 @@ import Header from "./sections/Header";
 import Footer from "./sections/Footer";
 import { Projects } from "./sections/Projects";
 import Career from "./sections/Career";
-import { AnimatedTestimonialsDemo } from "./sections/About2";
+import { AnimatedTestimonialsDemo } from "./sections/About";
 
 
 export default function Home() {

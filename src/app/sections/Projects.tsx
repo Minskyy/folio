@@ -11,6 +11,9 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 
+const basePath = process.env.NODE_ENV === 'production' ? '/folio' : '';
+
+
 export function Projects() {
   return (
     <section id="projects">
@@ -243,7 +246,7 @@ const items = [
         A tool to exploit a lottery-type of smart contract
       </span>
     ),
-    header: SkeletonFour("/BurgerBuilder.png"),
+    header: SkeletonFour(`${basePath}/BurgerBuilder.png`),
     className: "md:col-span-1",
     icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
     url: "https://burgerbuilder-5da8a.web.app/"
