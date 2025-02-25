@@ -4,6 +4,10 @@ import React from "react";
 import { Timeline } from "@/components/ui/timeline";
 
 export function TimelineDemo() {
+
+  const basePath = process.env.NODE_ENV === 'production' ? '/folio' : '';
+
+
   const data = [
     {
       title: "2021-Present",
@@ -12,7 +16,7 @@ export function TimelineDemo() {
           <div className="grid grid-cols-2 gap-4">
             <Image
               onClick={() => window.open("https://home.kuehne-nagel.com/en/", "_blank")}
-              src="/Kuehnenagel.jpg"
+              src={`${basePath}/Kuehnenagel.jpg`}
               alt="startup template"
               width={500}
               height={500}
