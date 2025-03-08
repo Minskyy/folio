@@ -100,12 +100,11 @@ const items = [
         Tools for detecting freshly-launched tokens with great potential.
       </span>
     ),
-    header: SkeletonFour("/BSCTools.png"),
+    header: SkeletonFour(`${basePath}/BSCTools.png`),
     className: "md:col-span-1",
     icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
     url: "https://github.com/Minskyy/CoinSniper"
   },
-
   {
     title: "Portfolio website",
     description: (
@@ -113,7 +112,7 @@ const items = [
         This website!
       </span>
     ),
-    header: SkeletonFour("/folioWebsite.png"),
+    header: SkeletonFour(`${basePath}/folioWebsite.png`),
     className: "md:col-span-1",
     icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
     url: "https://github.com/Minskyy/folio"
@@ -125,7 +124,7 @@ const items = [
         A decentralized application mixing finances, art, and NFT&apos;s
       </span>
     ),
-    header: SkeletonFour("/Pixel.png"),
+    header: SkeletonFour(`${basePath}/Pixel.png`),
     className: "md:col-span-1",
     icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
     url: "https://github.com/Minskyy/pixel-web"
@@ -137,7 +136,7 @@ const items = [
         A bot to exploit polymarket&apos;s reward system
       </span>
     ),
-    header: SkeletonFour("/Polymarket.png"),
+    header: SkeletonFour(`${basePath}/Polymarket.png`),
     className: "md:col-span-1",
     icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
   },
