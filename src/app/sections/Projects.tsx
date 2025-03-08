@@ -11,6 +11,29 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 
+const slideData = [
+  {
+    title: "Mystic Mountains",
+    button: "Explore Component",
+    src: "https://images.unsplash.com/photo-1494806812796-244fe51b774d?q=80&w=3534&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    title: "Urban Dreams",
+    button: "Explore Component",
+    src: "https://images.unsplash.com/photo-1518710843675-2540dd79065c?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    title: "Neon Nights",
+    button: "Explore Component",
+    src: "https://images.unsplash.com/photo-1590041794748-2d8eb73a571c?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    title: "Desert Whispers",
+    button: "Explore Component",
+    src: "https://images.unsplash.com/photo-1679420437432-80cfbf88986c?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+];
+
 const basePath = process.env.NODE_ENV === 'production' ? '/folio' : '';
 
 
@@ -106,7 +129,7 @@ const SkeletonFour = (src: string) => {
     >
       <motion.div
         variants={first}
-        className="h-full w-3/4 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
+        className="h-full w-full rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
       >
         <Image
           src={src}
@@ -122,18 +145,6 @@ const SkeletonFour = (src: string) => {
   );
 };
 const SkeletonFive = () => {
-  const variants = {
-    initial: {
-      x: 0,
-    },
-    animate: {
-      x: 10,
-      rotate: 5,
-      transition: {
-        duration: 0.2,
-      },
-    },
-  };
   const variantsSecond = {
     initial: {
       x: 0,
@@ -153,22 +164,7 @@ const SkeletonFive = () => {
       whileHover="animate"
       className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2"
     >
-      <motion.div
-        variants={variants}
-        className="flex flex-row rounded-2xl border border-neutral-100 dark:border-white/[0.2] p-2  items-start space-x-2 bg-white dark:bg-black"
-      >
-        <Image
-          src="https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg"
-          alt="avatar"
-          height="100"
-          width="100"
-          className="rounded-full h-10 w-10"
-        />
-        <p className="text-xs text-neutral-500">
-          There are a lot of cool framerworks out there like React, Angular,
-          Vue, Svelte that can make your life ....
-        </p>
-      </motion.div>
+
       <motion.div
         variants={variantsSecond}
         className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center justify-end space-x-2 w-3/4 ml-auto bg-white dark:bg-black"
@@ -194,15 +190,16 @@ const items = [
   },
 
   {
-    title: "This website",
+    title: "Portfolio website",
     description: (
       <span className="text-sm">
-        Summarize your lengthy documents with AI technology.
+        This website!
       </span>
     ),
-    header: <SkeletonFive />,
+    header: SkeletonFour("/folioWebsite.png"),
     className: "md:col-span-1",
     icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
+    url: "https://github.com/Minskyy/folio"
   },
   {
     title: "Pixel",
@@ -223,7 +220,7 @@ const items = [
         A bot to exploit polymarket&apos;s reward system
       </span>
     ),
-    header: <SkeletonThree />,
+    header: SkeletonFour("/Polymarket.png"),
     className: "md:col-span-1",
     icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
   },

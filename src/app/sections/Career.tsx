@@ -2,6 +2,8 @@
 import Image from "next/image";
 import React from "react";
 import { Timeline } from "@/components/ui/timeline";
+import { Badge } from "@/components/ui/badge";
+import { BadgeList } from "@/components/ui/badge-list";
 
 export function TimelineDemo() {
 
@@ -22,21 +24,24 @@ export function TimelineDemo() {
               className="cursor-pointer rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
           </div>
-          <p>
-            Fullstack Developer - Angular 2, Typescript, Node.js Javascript, Java
-          </p>
-          <p>
-            Migrating a huge java swing application to Angular, one dialog at a time
-          </p>
-          <p>
-            Developing tools to automate the process of creating the scaffolding for the migrated dialogs (Angular Schematics)
-          </p>
-          <p>
-            Implementing best practices and improving overall performance of the application and quality of the codebase
-          </p>
-          <p>
-            Working daily with cloud based tools and services
-          </p>
+          <div className="text-lg text-gray-500 mt-8 dark:text-neutral-300">
+            <p>
+              Migrating a huge <span className="font-semibold">java swing application</span> to <span className="font-semibold">Angular</span>, one dialog at a time
+            </p>
+            <p>
+              Developing tools to automate the process of creating the scaffolding for the migrated dialogs (<span className="font-semibold">Angular Schematics</span>)
+            </p>
+            <p>
+              Implementing best practices and improving overall <span className="font-semibold">performance</span> of the application and <span className="font-semibold">quality</span> of the codebase
+            </p>
+            <p>
+              Working daily with <span className="font-semibold">cloud based tools and services</span>
+            </p>
+          </div>
+
+
+          <BadgeList badgeNames={["Angular", "Node", "Oracle", "Java", "Spring Boot", "Docker", "Kubernetes"]}></BadgeList>
+
 
         </div>
       ),
@@ -56,13 +61,15 @@ export function TimelineDemo() {
               className="cursor-pointer rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
           </div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            Developing software mainly using ReactJS and Node.js.
-            - Dealing daily with cloud and microservices architectures
-            - Experience with IPBX solutions and technologies underneath (VoIP, SIP)
-            - Providing users with support in the occurrence of software or server issues (Linux, PM2, freeswitch)
-            - Experience with interesting 3rd party services, such as Dialogflow and Deepspeech.
-          </p>
+          <div className="text-lg text-gray-500 mt-8 dark:text-neutral-300">
+            <p>Developing software mainly using <span className="font-semibold">ReactJS</span> and <span className="font-semibold">Node.js</span>.</p>
+            <p>Dealing daily with <span className="font-semibold">cloud</span> and <span className="font-semibold">microservices architectures</span>.</p>
+            <p>Experience with <span className="font-semibold">IPBX solutions</span> and technologies underneath (<span className="font-semibold">VoIP</span>, <span className="font-semibold">SIP</span>).</p>
+            <p>Providing users with support in the occurrence of software or server issues (<span className="font-semibold">Linux</span>, <span className="font-semibold">PM2</span>, <span className="font-semibold">Freeswitch</span>).</p>
+            <p>Experience with interesting 3rd party services, such as <span className="font-semibold">Dialogflow</span> and <span className="font-semibold">Deepspeech</span>.</p>
+          </div>
+          <BadgeList badgeNames={["React", "Node", "Postgres", "Docker", "Microservices", "Elastic Search"]}></BadgeList>
+
 
         </div>
       ),
@@ -81,9 +88,10 @@ export function TimelineDemo() {
               className="cursor-pointer rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
           </div>
-          <h1 className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+          <h1 className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal">
             Built interactive educational platforms using JavaScript and ThreeJS, focusing on responsive design and user engagement.
           </h1>
+          <BadgeList badgeNames={["Javascript", "HTML", "ThreeJS"]}></BadgeList>
         </div>
       ),
     },

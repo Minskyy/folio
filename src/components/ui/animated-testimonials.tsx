@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
+import { AnimatedParagraph } from "./animated-paragraph";
 
 type Testimonial = {
   quote: string;
@@ -88,31 +89,7 @@ export const AnimatedTestimonials = ({
             <p className="text-sm text-gray-500 dark:text-neutral-500">
               {testimonials[active].designation}
             </p>
-            <motion.p className="text-lg text-gray-500 mt-8 dark:text-neutral-300">
-              {testimonials[active].quote.split(" ").map((word, index) => (
-                <motion.span
-                  key={index}
-                  initial={{
-                    filter: "blur(10px)",
-                    opacity: 0,
-                    y: 5,
-                  }}
-                  animate={{
-                    filter: "blur(0px)",
-                    opacity: 1,
-                    y: 0,
-                  }}
-                  transition={{
-                    duration: 0.2,
-                    ease: "easeInOut",
-                    delay: 0.02 * index,
-                  }}
-                  className="inline-block"
-                >
-                  {word}&nbsp;
-                </motion.span>
-              ))}
-            </motion.p>
+            <AnimatedParagraph text={testimonials[active].quote} ></AnimatedParagraph>
           </motion.div>
         </div>
       </div>
