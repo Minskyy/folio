@@ -2,7 +2,6 @@
 import Image from "next/image";
 import React from "react";
 import { Timeline } from "@/components/ui/timeline";
-import { Badge } from "@/components/ui/badge";
 import { BadgeList } from "@/components/ui/badge-list";
 
 export function TimelineDemo() {
@@ -26,7 +25,10 @@ export function TimelineDemo() {
           </div>
           <div className="text-lg text-gray-500 mt-8 dark:text-neutral-300">
             <p>
-              Migrating a huge <span className="font-semibold">java swing application</span> to <span className="font-semibold">Angular</span>, one dialog at a time
+              Migrating a huge <span className="font-semibold">java swing application</span> to <span className="font-semibold">Angular</span>
+            </p>
+            <p>
+              Developing tools to improve the experience of everyone involved in the project
             </p>
             <p>
               Developing tools to automate the process of creating the scaffolding for the migrated dialogs (<span className="font-semibold">Angular Schematics</span>)
