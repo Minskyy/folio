@@ -2,7 +2,6 @@ import { FloatingDock } from "@/components/ui/floating-dock";
 import Image from "next/image";
 
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const KNSkills = [
   {
     title: 'Angular',
