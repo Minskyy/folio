@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { BadgeList } from "./badge-list";
 
 export const BentoGrid = ({
   className,
@@ -10,7 +11,7 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        "grid md:auto-rows-[18rem] grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto ",
+        "grid md:auto-rows-[18rem] grid-cols-1 md:grid-cols-4 gap-4 max-w-7xl mx-auto ",
         className
       )}
     >
@@ -24,14 +25,14 @@ export const BentoGridItem = ({
   title,
   description,
   header,
-  icon,
+  technologies,
   url
 }: {
   className?: string;
   title?: string | React.ReactNode;
   description?: string | React.ReactNode;
   header?: React.ReactNode;
-  icon?: React.ReactNode;
+  technologies: string[];
   url?: string
 }) => {
   return (
@@ -45,7 +46,7 @@ export const BentoGridItem = ({
     >
       {header}
       <div className="group-hover/bento:translate-x-2 transition duration-200">
-        {icon}
+        <BadgeList badgeNames={technologies}></BadgeList>
         <div className="font-sans font-bold text-neutral-600 dark:text-neutral-200 mb-2 mt-2">
           {title}
         </div>

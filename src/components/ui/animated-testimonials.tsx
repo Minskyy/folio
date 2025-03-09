@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 import { AnimatedParagraph } from "./animated-paragraph";
+import Socials from "@/app/sections/Socials";
 
 type Testimonial = {
   quote: string;
@@ -43,7 +44,6 @@ export const AnimatedTestimonials = ({
                     rotate: randomRotateY(),
                     y: 0,
                   }}
-
                   transition={{
                     duration: 0.4,
                     ease: "easeInOut",
@@ -89,8 +89,11 @@ export const AnimatedTestimonials = ({
             <p className="text-sm text-gray-500 dark:text-neutral-500">
               {testimonials[active].designation}
             </p>
-            <AnimatedParagraph text={testimonials[active].quote} ></AnimatedParagraph>
+            <AnimatedParagraph
+              text={testimonials[active].quote}
+            ></AnimatedParagraph>
           </motion.div>
+        <Socials></Socials>
         </div>
       </div>
     </div>

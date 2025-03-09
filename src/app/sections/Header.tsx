@@ -6,10 +6,8 @@ const Header: React.FC = () => {
       <nav className="flex space-x-4 mx-auto font-semibold">
         <a href="#about">About</a>
         <a href="#career">Career</a>
-        <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
+        </nav>
     </header>
   );
 };

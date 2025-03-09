@@ -9,8 +9,8 @@ const Socials: React.FC = () => {
       icon: (
         <Image
           src="https://www.svgrepo.com/show/448234/linkedin.svg"
-          width={200}
-          height={200}
+          width={20}
+          height={20}
           alt="LinkedIn"
         />
       ),
@@ -21,8 +21,8 @@ const Socials: React.FC = () => {
       icon: (
         <Image
           src="https://www.svgrepo.com/show/512317/github-142.svg"
-          width={200}
-          height={200}
+          width={20}
+          height={20}
           alt="Aceternity Logo"
         />
       ),
@@ -32,7 +32,7 @@ const Socials: React.FC = () => {
 
 
   return (
-    <div className="flex items-center justify-center w-full mt-8">
+    <div className="flex mt-8 items-center justify-center w-full">
       <FloatingDock
         items={mySocials}
       />

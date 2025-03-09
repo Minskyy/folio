@@ -109,9 +109,8 @@ export function TimelineDemo() {
 const Career: React.FC = () => {
 
   return (
-    <section id="career">
       <TimelineDemo />
-    </section>
+    
   )
 
 

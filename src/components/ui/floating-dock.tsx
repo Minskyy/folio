@@ -1,5 +1,10 @@
 'use client';
 
+/**
+ * Note: Use position fixed according to your needs
+ * Desktop navbar is better positioned at the bottom
+ * Mobile navbar is better positioned at bottom right.
+ **/
 
 import { cn } from "@/lib/utils";
 import { IconLayoutNavbarCollapse } from "@tabler/icons-react";
@@ -8,9 +13,11 @@ import {
   MotionValue,
   motion,
   useMotionValue,
-} from "framer-motion";
+  useSpring,
+  useTransform,
+} from "motion/react";
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 export const FloatingDock = ({
   items,
@@ -63,7 +70,6 @@ const FloatingDockMobile = ({
                 transition={{ delay: (items.length - 1 - idx) * 0.05 }}
               >
                 <Link
-                  target="_blank"
                   href={item.href}
                   key={item.title}
                   className="h-10 w-10 rounded-full bg-gray-50 dark:bg-neutral-900 flex items-center justify-center"
@@ -92,13 +98,13 @@ const FloatingDockDesktop = ({
   items: { title: string; icon: React.ReactNode; href: string }[];
   className?: string;
 }) => {
-  const mouseX = useMotionValue(Infinity);
+  let mouseX = useMotionValue(Infinity);
   return (
     <motion.div
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        "mx-auto hidden md:flex h-24 gap-6 items-end rounded-2xl bg-slate-50 dark:bg-neutral-900 px-8 pb-6",
+        "mx-auto hidden md:flex h-16 gap-4 items-end  rounded-2xl bg-gray-50 dark:bg-neutral-900 px-4 pb-3",
         className
       )}
     >
@@ -110,6 +116,7 @@ const FloatingDockDesktop = ({
 };
 
 function IconContainer({
+  mouseX,
   title,
   icon,
   href,
@@ -119,7 +126,7 @@ function IconContainer({
   icon: React.ReactNode;
   href: string;
 }) {
-  /* let ref = useRef<HTMLDivElement>(null);
+  let ref = useRef<HTMLDivElement>(null);
 
   let distance = useTransform(mouseX, (val) => {
     let bounds = ref.current?.getBoundingClientRect() ?? { x: 0, width: 0 };
@@ -157,15 +164,15 @@ function IconContainer({
     mass: 0.1,
     stiffness: 150,
     damping: 12,
-  }); */
+  });
 
   const [hovered, setHovered] = useState(false);
 
   return (
-    <Link target="_blank" href={href}>
+    <Link href={href}>
       <motion.div
-        // ref={ref}
-        // style={{ width, height }}
+        ref={ref}
+        style={{ width, height }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
         className="aspect-square rounded-full bg-gray-200 dark:bg-neutral-800 flex items-center justify-center relative"
@@ -183,7 +190,7 @@ function IconContainer({
           )}
         </AnimatePresence>
         <motion.div
-          // style={{ width: widthIcon, height: heightIcon }}
+          style={{ width: widthIcon, height: heightIcon }}
           className="flex items-center justify-center"
         >
           {icon}
