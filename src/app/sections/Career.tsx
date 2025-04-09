@@ -64,7 +64,7 @@ export function TimelineDemo() {
             />
           </div>
           <div className="text-lg text-gray-500 mt-8 dark:text-neutral-300">
-            <p>- Developing a block-programming tool for building IVR's (Interactive Voice Response) using <span className="font-semibold">ReactJS</span> and <span className="font-semibold">Node.js</span>.</p>
+            <p>- Developing a block-programming tool for building IVR&apos;s (Interactive Voice Response) using <span className="font-semibold">ReactJS</span> and <span className="font-semibold">Node.js</span>.</p>
             <p>- Dealing daily with <span className="font-semibold">cloud</span> and <span className="font-semibold">microservices architectures</span>.</p>
             <p>- Experience with <span className="font-semibold">IPBX solutions</span> and technologies underneath (<span className="font-semibold">VoIP</span>, <span className="font-semibold">SIP</span>).</p>
             <p>- Providing users with support in the occurrence of software or server issues (<span className="font-semibold">Linux</span>, <span className="font-semibold">PM2</span>, <span className="font-semibold">Freeswitch</span>).</p>
