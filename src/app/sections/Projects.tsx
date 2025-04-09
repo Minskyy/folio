@@ -71,16 +71,16 @@ const items = [
     ),
     technologies: [
       "Node",
+      "Express",
       "Redis",
       "Angular",
       "GraphQL",
       "BitQuery",
       "Solidity",
-      "Heroku",
     ],
     header: Header(`${basePath}/pixel.png`),
     className: "md:col-span-2 md:row-span-2",
-    url: "https://github.com/Minskyy/pixel-web",
+    url: "https://pixel-io.art/",
   },
   {
     title: "Portfolio website",
